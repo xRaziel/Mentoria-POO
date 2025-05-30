@@ -1,0 +1,10 @@
+N001,Cazador de Asteroides,12,900.5,75,Óptimo,5
+N002,Nave de Pasajeros,8,1100.0,85,Funcional,150
+N003,Nave de Guerra,15,1200.0,70,Crítico,2.5
+N004,Laboratorio Orbital,10,950.0,90,Óptimo,4
+N005,Nave de Guerra,20,800.0,60,Crítico,3.0
+N006,Nave de Pasajeros,11,450.0,65,Funcional,100
+N007,Cazador de Asteroides,18,850.0,55,Crítico,3
+N008,Laboratorio Orbital,13,700.0,80,Funcional,2
+N009,Nave de Guerra,5,1600.0,95,Óptimo,5.0
+N010,Nave de Pasajeros,3,1300.0,90,Óptimo,180
