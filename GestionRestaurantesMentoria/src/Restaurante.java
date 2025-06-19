@@ -1,13 +1,13 @@
 public abstract class Restaurante {
     protected String codigo;
-    protected int aniosOperacion;;
+    protected int añosOperacion;;
     protected int numeroEmpleados;
     protected double ratingClientes;
     protected String estadoFinanciero;
 
-    public Restaurante(String codigo, int aniosOperacion, int numeroEmpleados, double ratingClientes, String estadoFinanciero) {
+    public Restaurante(String codigo, int añosOperacion, int numeroEmpleados, double ratingClientes, String estadoFinanciero) {
         this.codigo = codigo;
-        this.aniosOperacion = aniosOperacion;
+        this.añosOperacion = añosOperacion;
         this.numeroEmpleados = numeroEmpleados;
         this.ratingClientes = ratingClientes;
         this.estadoFinanciero = estadoFinanciero;
@@ -25,12 +25,12 @@ public abstract class Restaurante {
         this.codigo = codigo;
     }
 
-    public int getAniosOperacion() {
-        return aniosOperacion;
+    public int getAñosOperacion() {
+        return añosOperacion;
     }
 
-    public void setAniosOperacion(int aniosOperacion) {
-        this.aniosOperacion = aniosOperacion;
+    public void setAñosOperacion(int añosOperacion) {
+        this.añosOperacion = añosOperacion;
     }
 
     public int getNumeroEmpleados() {
