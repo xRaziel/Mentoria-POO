@@ -42,6 +42,7 @@ public class Sistema {
         MantenimientoVisitor mantenimiento = new MantenimientoVisitor();
         RankingVisitor ranking = new RankingVisitor();
         RentabilidadVisitor rentabilidad = new RentabilidadVisitor();
+        CalculadoraRentabilidad calculadoraRentabilidad = new CalculadoraRentabilidad();
 
         for(Nave nave : naves) {
             nave.accept(analizador);
@@ -49,10 +50,10 @@ public class Sistema {
             nave.accept(ranking);
             nave.accept(rentabilidad);
         }
-        imprimirResultados(analizador, mantenimiento, ranking,rentabilidad);
+        imprimirResultados(analizador, mantenimiento, ranking,rentabilidad, calculadoraRentabilidad);
     }
 
-    public void imprimirResultados(AnalizadorEstadoVisitor analizador,MantenimientoVisitor mantenimiento,RankingVisitor ranking,RentabilidadVisitor rentabilidad) {
+    public void imprimirResultados(AnalizadorEstadoVisitor analizador,MantenimientoVisitor mantenimiento,RankingVisitor ranking,RentabilidadVisitor rentabilidad,CalculadoraRentabilidad calculadora) {
         System.out.println("Resultados del análisis de naves:");
         System.out.println("Cantidad de naves por estado:");
         for (String estado : analizador.getConteoEstados().keySet()) {
@@ -67,6 +68,7 @@ public class Sistema {
         }
 
         System.out.println("Tipo de nave mas comun en estado crítico: " + analizador.getMasComunCritico());
+        
 
         System.out.println("Top 3 naves con mayor potencia de motor:");
         List<Nave> topPotencia = ranking.getTop3MayorPotencia();
@@ -82,6 +84,16 @@ public class Sistema {
 
         System.out.println("Nave mas antigua: "+ ranking.getNaveMasAntigua().getCodigo());
         System.out.println("Nave mas nueva: " + ranking.getNaveMasNueva().getCodigo());
+
+        System.out.println("Rentabilidad de naves:");
+        for (Nave nave : naves) {
+            try {
+                double rentabilidadNave = calculadora.calcularRentabilidad(nave);
+                System.out.println(nave.getCodigo() + " - Rentabilidad: " + rentabilidadNave);
+            } catch (IllegalArgumentException e) {
+                System.out.println("No se pudo calcular la rentabilidad para la nave: " + nave.getCodigo() + " - " + e.getMessage());
+            }
+        }
 
         System.out.println("Nave con mayor rentabilidad: "+ rentabilidad.getNaveMasRentable().getCodigo() +
                 " - Rentabilidad: " + rentabilidad.getMaxRentabilidad());
