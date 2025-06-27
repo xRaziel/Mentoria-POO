@@ -1,0 +1,12 @@
+12345678-9,Juan Perez,ABC123,auto,Toyota Corolla,5
+87654321-0,Maria Rodriguez,XYZ789,camion,Mercedes Actros,3500
+11223344-5,Carlos Lopez,DEF456,moto,Yamaha R6,600
+98765432-1,Ana Garcia,GHI789,auto,Honda Civic,4
+55667788-9,Pedro Martinez,JKL012,camion,Volvo FH,1800
+33445566-7,Sofia Hernandez,MNO345,moto,Kawasaki Ninja,1000
+77889900-1,Luis Gonzalez,PQR678,auto,Nissan Sentra,7
+22334455-6,Carmen Silva,STU901,auto,Chevrolet Cruze,8
+66778899-0,Roberto Torres,VWX234,moto,Honda CBR,250
+44556677-8,Elena Vargas,YZA567,camion,Scania R450,2200
+19876543-2,Diego Morales,BCD890,auto,Hyundai Elantra,6
+13579246-8,Lucia Ruiz,EFG123,moto,Suzuki GSX,750
